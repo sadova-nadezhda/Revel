@@ -532,6 +532,12 @@
       background-color: var(--primary, $primary);
       font-weight: 700;
       text-align: center;
+      transition: background-color 0.3s ease-out;
+    }
+    &:hover {
+      .category-card__caption {
+        background-color: var(--primary-dark, $primary-dark);
+      }
     }
   }
 }
@@ -570,6 +576,7 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+        transition: transform 0.3s ease-out;
       }
       @media(max-width: 767px) {
         height: calc(130 * var(--width-multiplier));
@@ -594,6 +601,13 @@
     }
     &__basket {
       width: 100%;
+    }
+    &:hover {
+      .products-card__img {
+        img {
+          transform: scale(1.1);
+        }
+      }
     }
     @media(max-width: 767px) {
       gap: calc(8 * var(--width-multiplier));
@@ -932,6 +946,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease-out;
       }
     }
     &__bottom {
@@ -941,6 +956,30 @@
       padding: calc(6 * var(--width-multiplier));
       border-radius: calc(6 * var(--width-multiplier));
       background-color: var(--white, $white);
+      transition: background-color 0.3s ease-out, color 0.3s ease-out;
+      svg {
+        display: block;
+        width: calc(24 * var(--width-multiplier));
+        height: calc(24 * var(--width-multiplier));
+        pointer-events: none;
+      }
+      path {
+        transition: fill 0.3s ease-out;
+      }
+    }
+    &:hover {
+      .news-card__img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      .news-card__bottom {
+        color: var(--white, $white);
+        background-color: var(--primary, $primary);
+        path {
+          fill: var(--white, $white);
+        }
+      }
     }
   }
   &-inner {

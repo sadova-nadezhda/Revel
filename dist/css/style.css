@@ -1125,6 +1125,11 @@ h6 {
   background-color: var(--primary, #7F6AFF);
   font-weight: 700;
   text-align: center;
+  transition: background-color 0.3s ease-out;
+}
+
+.category-card:hover .category-card__caption {
+  background-color: var(--primary-dark, #614ED5);
 }
 
 .catalog__title {
@@ -1158,6 +1163,7 @@ h6 {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  transition: transform 0.3s ease-out;
 }
 
 .products-card__type {
@@ -1176,6 +1182,10 @@ h6 {
 
 .products-card__basket {
   width: 100%;
+}
+
+.products-card:hover .products-card__img img {
+  transform: scale(1.1);
 }
 
 .product__container {
@@ -1510,6 +1520,7 @@ h6 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.3s ease-out;
 }
 
 .news-card__bottom {
@@ -1519,6 +1530,31 @@ h6 {
   padding: calc(6 * var(--width-multiplier));
   border-radius: calc(6 * var(--width-multiplier));
   background-color: var(--white, #FFFFFF);
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.news-card__bottom svg {
+  display: block;
+  width: calc(24 * var(--width-multiplier));
+  height: calc(24 * var(--width-multiplier));
+  pointer-events: none;
+}
+
+.news-card__bottom path {
+  transition: fill 0.3s ease-out;
+}
+
+.news-card:hover .news-card__img img {
+  transform: scale(1.1);
+}
+
+.news-card:hover .news-card__bottom {
+  color: var(--white, #FFFFFF);
+  background-color: var(--primary, #7F6AFF);
+}
+
+.news-card:hover .news-card__bottom path {
+  fill: var(--white, #FFFFFF);
 }
 
 .news-inner__img {
