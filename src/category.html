@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Категория" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <div class="breadcrumbs breadcrumbs-grey section-top">
+        <div class="container">
+          <div class="breadcrumbs__container">
+            <a href="">Главная</a>
+            <span>Каталог</span>
+          </div>
+        </div>
+      </div>
+      <section class="category section-pad-bottom section-hidden">
+        <div class="category__head">
+          <div class="container">
+            <h1 class="category__title">Каталог</h1>
+          </div>
+        </div>
+        <div class="category__container">
+          <div class="container">
+            <div class="category__cards grid grid-3">
+              <a class="category__card category-card" href="">
+                <div class="category-card__img"><img src="@img/category-1.png" alt=""></div>
+                <div class="category-card__caption text-up">Игровое оборудование</div>
+              </a>
+              <a class="category__card category-card" href="">
+                <div class="category-card__img"><img src="@img/category-2.png" alt=""></div>
+                <div class="category-card__caption text-up">Спортивное оборудование</div>
+              </a>
+              <a class="category__card category-card" href="">
+                <div class="category-card__img"><img src="@img/category-3.png" alt=""></div>
+                <div class="category-card__caption text-up">Улица и парк</div>
+              </a>
+              <a class="category__card category-card" href="">
+                <div class="category-card__img"><img src="@img/category-3.png" alt=""></div>
+                <div class="category-card__caption text-up">Улица и парк</div>
+              </a>
+              <a class="category__card category-card" href="">
+                <div class="category-card__img"><img src="@img/category-2.png" alt=""></div>
+                <div class="category-card__caption text-up">Спортивное оборудование</div>
+              </a>
+              <a class="category__card category-card" href="">
+                <div class="category-card__img"><img src="@img/category-1.png" alt=""></div>
+                <div class="category-card__caption text-up">Игровое оборудование</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>
