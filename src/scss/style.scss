@@ -1043,6 +1043,12 @@
         margin-bottom: calc(24 * var(--width-multiplier));
       }
     }
+    .projects-card__caption {
+      @media (max-width: 767px) {
+        max-width: 55%;
+        line-height: 1.4em;
+      }
+    }
   }
 }
 
@@ -1441,7 +1447,7 @@
         background-color: var(--primary, $primary);
       }
       @media (max-width: 767px) {
-        padding: calc(16 * var(--width-multiplier));
+        padding: calc(16 * var(--width-multiplier)) calc(13 * var(--width-multiplier));
       }
     }
   }
