@@ -1,5 +1,5 @@
 const header = document.querySelector("header");
-const sectionTop = document.querySelector(".section-top");
+const sectionTops = document.querySelectorAll(".section-top");
 
 window.addEventListener("load", function () {
   let link = document.querySelector(".header__burger");
@@ -31,14 +31,16 @@ window.addEventListener("load", function () {
     });
   }
 
-  function addPadTop(headerEl, section) {
-    if (!headerEl || !section) return;
+  function addPadTop(headerEl, sections) {
+    if (!headerEl || !sections?.length) return;
     const headerHeight = headerEl.offsetHeight;
-    section.style.marginTop = `${headerHeight}px`;
+    sections.forEach((section) => {
+      section.style.marginTop = `${headerHeight}px`;
+    });
   }
 
-  if (sectionTop && header) {
-    addPadTop(header, sectionTop);
+  if (sectionTops && header) {
+    addPadTop(header, sectionTops);
   }
 
   function handleScroll() {
@@ -121,6 +123,21 @@ window.addEventListener("load", function () {
     },
   });
 
+  var otherSwiper2 = new Swiper(".otherSwiper2", {
+    slidesPerView: 1,
+    spaceBetween: s(16),
+    pagination: {
+      el: ".other-pagination-2",
+      type: "progressbar",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: s(20),
+      },
+    },
+  });
+
   var productSwiper = new Swiper(".productSwiper", {
     spaceBetween: s(8),
     slidesPerView: 4,
@@ -137,8 +154,8 @@ window.addEventListener("load", function () {
   // ====== Resize ======
 
   window.addEventListener("resize", () => {
-    if (sectionTop && header) {
-      addPadTop(header, sectionTop);
+    if (sectionTops && header) {
+      addPadTop(header, sectionTops);
     }
   });
 
