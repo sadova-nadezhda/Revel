@@ -1352,7 +1352,9 @@
     &__card {
       min-height: calc(210 * var(--width-multiplier));
       .benefits-card__txt {
-        max-width: unset;
+        @media(max-width: 767px) {
+          max-width: unset;
+        }
       }
     }
   }

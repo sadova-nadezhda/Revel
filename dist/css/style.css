@@ -1860,10 +1860,6 @@ h6 {
   min-height: calc(210 * var(--width-multiplier));
 }
 
-.about-benefit__card .benefits-card__txt {
-  max-width: unset;
-}
-
 .partners__container {
   display: flex;
   flex-direction: column;
@@ -2645,6 +2641,10 @@ h6 {
 
   .about-benefit__cards {
     gap: calc(8 * var(--width-multiplier));
+  }
+
+  .about-benefit__card .benefits-card__txt {
+    max-width: unset;
   }
 
   .partners__box svg {
