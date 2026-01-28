@@ -116,7 +116,7 @@ input:not([type="checkbox"]):not([type="radio"]), select, textarea {
   width: 100%;
   padding: calc(18 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
   border: 1px solid var(--grey, $grey);
-  border-radius: 0;
+  border-radius: calc(8 * var(--width-multiplier));
   color: var(--dark, $dark);
   background-color: var(--grey, $grey);
   font: inherit;
@@ -144,6 +144,42 @@ textarea {
   resize: none;
   height: calc(90 * var(--width-multiplier));
 }
+
+.sort {
+  position: relative;
+  width: 100%;
+  max-width: calc(320 * var(--width-multiplier));
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(10 * var(--width-multiplier));
+    transform: translateY(-50%);
+    width: calc(24 * var(--width-multiplier));
+    height: calc(24 * var(--width-multiplier));
+    background: url(../img/sort.svg) center / contain no-repeat;
+    z-index: 1;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: calc(10 * var(--width-multiplier));
+    padding-left: calc(42 * var(--width-multiplier));
+    border: 1px solid var(--grey, $grey);
+    border-radius: calc(8 * var(--width-multiplier));
+    color: var(--dark, $dark);
+    background: url(../img/down.svg) calc(100% - calc(10 * var(--width-multiplier))) 50% / calc(24 * var(--width-multiplier)) no-repeat;
+    background-color: var(--grey, $grey);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 
 .search {
   input:not([type="checkbox"]):not([type="radio"]) {

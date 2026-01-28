@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Категория" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <div class="breadcrumbs section-top">
+        <div class="container">
+          <div class="breadcrumbs__container">
+            <a href="">Главная</a>
+            <span>Корзина</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="cart section-pad section-hidden">
+        <div class="container">
+          <div class="cart__container">
+            <h1 class="cart__title">Корзина</h1>
+
+            <div class="cart__wrap">
+              <div class="cart__table">
+                <div class="cart-table">
+                  <div class="cart-table__head">
+                    <div class="cart-table__th cart-table__th--name">Название</div>
+                    <div class="cart-table__th cart-table__th--qty">Количество</div>
+                    <div class="cart-table__th cart-table__th--price">Цена</div>
+                    <div class="cart-table__th cart-table__th--actions"></div>
+                  </div>
+
+                  <!-- row -->
+                  <div class="cart-table__row">
+                    <div class="cart-product">
+                      <a class="cart-product__img" href="#">
+                        <img src="@img/product-1.png" alt="Товар" />
+                      </a>
+                      <div class="cart-product__info">
+                        <a class="cart-product__name" href="#">Спортивный модуль «Паутина»</a>
+                        <div class="cart-product__meta">Размер: 180*80*150</div>
+                      </div>
+                    </div>
+
+                    <div class="cart-qty" aria-label="Количество">
+                      <button class="cart-qty__btn button" type="button" aria-label="Уменьшить">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_78_1249)">
+                          <path d="M16.0003 2.66666C8.63366 2.66666 2.66699 8.63332 2.66699 16C2.66699 23.3667 8.63366 29.3333 16.0003 29.3333C23.367 29.3333 29.3337 23.3667 29.3337 16C29.3337 8.63332 23.367 2.66666 16.0003 2.66666ZM22.667 17.3333H9.33366V14.6667H22.667V17.3333Z" fill="#534F6D"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_78_1249">
+                          <rect width="32" height="32" fill="white"/>
+                          </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+
+                      <input class="cart-qty__input" type="text" value="1" inputmode="numeric" />
+
+                      <button class="cart-qty__btn button" type="button" aria-label="Увеличить">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_78_1244)">
+                          <path d="M16.0003 2.66666C8.63366 2.66666 2.66699 8.63332 2.66699 16C2.66699 23.3667 8.63366 29.3333 16.0003 29.3333C23.367 29.3333 29.3337 23.3667 29.3337 16C29.3337 8.63332 23.367 2.66666 16.0003 2.66666ZM22.667 17.3333H17.3337V22.6667H14.667V17.3333H9.33366V14.6667H14.667V9.33332H17.3337V14.6667H22.667V17.3333Z" fill="#534F6D"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_78_1244">
+                          <rect width="32" height="32" fill="white"/>
+                          </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="cart-price">5 890 000 ₸</div>
+
+                    <button class="cart-remove" type="button" aria-label="Удалить">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.25 19.5C5.25 20.875 6.375 22 7.75 22H15.25C16.625 22 17.75 20.875 17.75 19.5V7H5.25V19.5ZM19 3.25H15.25L14 2H9L7.75 3.25H4V5.75H19V3.25Z" fill="#1B1D1F"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- row -->
+                  <div class="cart-table__row">
+                    <div class="cart-product">
+                      <a class="cart-product__img" href="#">
+                        <img src="@img/product-2.png" alt="Товар" />
+                      </a>
+                      <div class="cart-product__info">
+                        <a class="cart-product__name" href="#">Спортивное оборудование для воркаут «Шведская стенка»</a>
+                        <div class="cart-product__meta">Размер: 180*80*150</div>
+                      </div>
+                    </div>
+
+                    <div class="cart-qty" aria-label="Количество">
+                      <button class="cart-qty__btn button" type="button" aria-label="Уменьшить">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_78_1249)">
+                          <path d="M16.0003 2.66666C8.63366 2.66666 2.66699 8.63332 2.66699 16C2.66699 23.3667 8.63366 29.3333 16.0003 29.3333C23.367 29.3333 29.3337 23.3667 29.3337 16C29.3337 8.63332 23.367 2.66666 16.0003 2.66666ZM22.667 17.3333H9.33366V14.6667H22.667V17.3333Z" fill="#534F6D"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_78_1249">
+                          <rect width="32" height="32" fill="white"/>
+                          </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+
+                      <input class="cart-qty__input" type="text" value="1" inputmode="numeric" />
+
+                      <button class="cart-qty__btn button" type="button" aria-label="Увеличить">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_78_1244)">
+                          <path d="M16.0003 2.66666C8.63366 2.66666 2.66699 8.63332 2.66699 16C2.66699 23.3667 8.63366 29.3333 16.0003 29.3333C23.367 29.3333 29.3337 23.3667 29.3337 16C29.3337 8.63332 23.367 2.66666 16.0003 2.66666ZM22.667 17.3333H17.3337V22.6667H14.667V17.3333H9.33366V14.6667H14.667V9.33332H17.3337V14.6667H22.667V17.3333Z" fill="#534F6D"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_78_1244">
+                          <rect width="32" height="32" fill="white"/>
+                          </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="cart-price">1 230 000 ₸</div>
+
+                    <button class="cart-remove" type="button" aria-label="Удалить">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.25 19.5C5.25 20.875 6.375 22 7.75 22H15.25C16.625 22 17.75 20.875 17.75 19.5V7H5.25V19.5ZM19 3.25H15.25L14 2H9L7.75 3.25H4V5.75H19V3.25Z" fill="#1B1D1F"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- row -->
+                  <div class="cart-table__row">
+                    <div class="cart-product">
+                      <a class="cart-product__img" href="#">
+                        <img src="@img/product-3.png" alt="Товар" />
+                      </a>
+                      <div class="cart-product__info">
+                        <a class="cart-product__name" href="#">Спортивный модуль «Паутина»</a>
+                        <div class="cart-product__meta">Размер: 180*80*150</div>
+                      </div>
+                    </div>
+
+                    <div class="cart-qty" aria-label="Количество">
+                      <button class="cart-qty__btn button" type="button" aria-label="Уменьшить">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_78_1249)">
+                          <path d="M16.0003 2.66666C8.63366 2.66666 2.66699 8.63332 2.66699 16C2.66699 23.3667 8.63366 29.3333 16.0003 29.3333C23.367 29.3333 29.3337 23.3667 29.3337 16C29.3337 8.63332 23.367 2.66666 16.0003 2.66666ZM22.667 17.3333H9.33366V14.6667H22.667V17.3333Z" fill="#534F6D"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_78_1249">
+                          <rect width="32" height="32" fill="white"/>
+                          </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+
+                      <input class="cart-qty__input" type="text" value="1" inputmode="numeric" />
+
+                      <button class="cart-qty__btn button" type="button" aria-label="Увеличить">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_78_1244)">
+                          <path d="M16.0003 2.66666C8.63366 2.66666 2.66699 8.63332 2.66699 16C2.66699 23.3667 8.63366 29.3333 16.0003 29.3333C23.367 29.3333 29.3337 23.3667 29.3337 16C29.3337 8.63332 23.367 2.66666 16.0003 2.66666ZM22.667 17.3333H17.3337V22.6667H14.667V17.3333H9.33366V14.6667H14.667V9.33332H17.3337V14.6667H22.667V17.3333Z" fill="#534F6D"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_78_1244">
+                          <rect width="32" height="32" fill="white"/>
+                          </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="cart-price">5 890 000 ₸</div>
+
+                    <button class="cart-remove" type="button" aria-label="Удалить">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.25 19.5C5.25 20.875 6.375 22 7.75 22H15.25C16.625 22 17.75 20.875 17.75 19.5V7H5.25V19.5ZM19 3.25H15.25L14 2H9L7.75 3.25H4V5.75H19V3.25Z" fill="#1B1D1F"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cart__total">
+                <aside class="cart-total">
+                  <div class="cart-total__title">Итог</div>
+
+                  <div class="cart-total__list">
+                    <div class="cart-total__item">
+                      <div class="cart-total__name">Спортивный модуль «Паутина»</div>
+                      <div class="cart-total__sum">5 890 000 ₸</div>
+                    </div>
+                    <div class="cart-total__item">
+                      <div class="cart-total__name">Спортивное оборудование для воркаут «Шведская стенка»</div>
+                      <div class="cart-total__sum">1 230 000 ₸</div>
+                    </div>
+                    <div class="cart-total__item">
+                      <div class="cart-total__name">Спортивное оборудование для воркаут «Шведская стенка»</div>
+                      <div class="cart-total__sum">1 230 000 ₸</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-total__footer">
+                    <div class="cart-total__count">3 товара:</div>
+                    <div class="cart-total__grand">7 950 000 ₸</div>
+                  </div>
+
+                  <div class="cart-total__actions">
+                    <button class="cart-total__btn button button-primary" type="button">СФОРМИРОВАТЬ КП</button>
+                    <button class="cart-total__btn button button-stroke" type="button">СВЯЗАТЬСЯ С МЕНЕДЖЕРОМ</button>
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

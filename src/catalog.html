@@ -23,7 +23,15 @@
               <div class="catalog__content">
                 <div class="catalog__group">
                   <div class="catalog__tabs"></div>
-                  <div class="catalog__sort"></div>
+                  <div class="catalog__sort sort">
+                    <select name="orderby" class="orderby" aria-label="Заказ в магазине">
+                      <option value="menu_order" selected="selected">Исходная сортировка</option>
+                      <option value="popularity">По популярности</option>
+                      <option value="date">По новизне</option>
+                      <option value="price">По возрастанию цены</option>
+                      <option value="price-desc">По убыванию цены</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="catalog__cards grid grid-3">
                   <a class="catalog-products__card products-card" href="">
