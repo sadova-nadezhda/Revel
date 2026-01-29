@@ -167,3 +167,65 @@ window.addEventListener("load", function () {
 
   var tabs = new Tabby('[data-tabs]');
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const trigger = document.querySelector(".js-catalog-trigger");
+  const mega = document.querySelector(".js-mega");
+  if (!trigger || !mega) return;
+
+  const tabs = mega.querySelectorAll(".mega__tab");
+  const panels = mega.querySelectorAll(".mega__panel");
+
+  const open = () => {
+    mega.classList.add("open");
+    mega.setAttribute("aria-hidden", "false");
+  };
+  const close = () => {
+    mega.classList.remove("open");
+    mega.setAttribute("aria-hidden", "true");
+  };
+
+  // const parentLi = trigger.closest("li");
+  // if (parentLi) {
+  //   parentLi.addEventListener("mouseenter", () => open());
+  //   parentLi.addEventListener("mouseleave", () => close());
+  // }
+
+  const wrapper = trigger.closest(".header__catalog-item");
+
+  if (wrapper && window.matchMedia("(min-width: 1025px)").matches) {
+    wrapper.addEventListener("mouseenter", open);
+    wrapper.addEventListener("mouseleave", close);
+  }
+
+  // Закрытие по клику вне меню (работает и на десктопе, и на мобиле)
+  document.addEventListener("click", (e) => {
+    if (!mega.classList.contains("open")) return;
+    if (!wrapper) return;
+    if (!wrapper.contains(e.target)) close();
+  });
+
+  trigger.addEventListener("click", (e) => {
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+      e.preventDefault();
+      mega.classList.contains("open") ? close() : open();
+    }
+  });
+
+  const setTab = (name) => {
+    tabs.forEach((b) => b.classList.toggle("is-active", b.dataset.tab === name));
+    panels.forEach((p) =>
+      p.classList.toggle("is-active", p.dataset.panel === name)
+    );
+  };
+
+  tabs.forEach((btn) => {
+    btn.addEventListener("mouseenter", () => setTab(btn.dataset.tab));
+    btn.addEventListener("click", () => setTab(btn.dataset.tab));
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
+});
+
